@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="jumbotron bg-success text-center mx-auto">
+        <h1>Welcome to a Burger Joint</h1>
+        <h3>Create a Burger for yourself</h3>
+        <h3>Then you Eat Da Burger (Devour it)!</h3>
+    </div>
+
+    <div class="container">
+        <form class="create-form">
+            <div class="form-group">
+                <label for="newburger">Create Da Burger</label>
+                <input type="text" class="form-control" id="newBurger" placeholder="Pulled Pork with Swiss" name="burger">
+            </div>
+            <button type="submit" class="btn btn-success" id="create-burger">Order up!</button>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-6 text-center mx-auto">
+            <div>
+                <h2>Ordered Burgers</h2>
+            </div>
+            <p>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <h4>{{this.burger_name}}
+                    <button type="button" class="devour-burger btn btn-danger mb-3" id="devour-btn" data-id="{{this.id}}" data-newDevoured="{{devour}}">
+                        Devour ME!!
+                        </button></h4>
+                {{/unless}}
+                {{/each}}
+            </p>
+        </div>
+        <div class="col-6 text-center mx-auto">
+            <div>
+                <h2>Burgers Devoured Today</h2>
+            </div>
+            <p>
+                {{#each burgers}}
+                {{#if devoured}}
+                <h4>{{this.burger_name}}</h4>
+                {{/if}}
+                {{/each}}
+            </p>
+        </div>
+    </div>
+</div>
