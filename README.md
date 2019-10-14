@@ -8,4 +8,4 @@
  
  * Burger will then be placed to the daily devoured burgers!
 
- Please visit for demo: https://dashboard.heroku.com/apps/stark-savannah-46437
+ Please visit for demo: https://stark-savannah-46437.herokuapp.com/
